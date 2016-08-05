@@ -1,38 +1,39 @@
-'use strict';
 
-var _ = require('lodash');
-var data = [];
+// 'use strict';
 
-function add (name, content) {
-  data.push({ name: name, content: content, id: data.length });
-  return _.clone(data[data.length - 1]);
-}
+// var _ = require('lodash');
+// var data = [];
 
-function list () {
-  return _.cloneDeep(data);
-}
+// function add (name, content) {
+//   data.push({ name: name, content: content, id: data.length });
+//   return _.clone(data[data.length - 1]);
+// }
 
-function find (properties) {
-  return _.cloneDeep(_.filter(data, properties));
-}
+// function list () {
+//   return _.cloneDeep(data);
+// }
 
-module.exports = { add: add, list: list, find: find };
+// function find (properties) {
+//   return _.cloneDeep(_.filter(data, properties));
+// }
 
-var randArrayEl = function(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
-};
+// module.exports = { add: add, list: list, find: find };
 
-var getFakeName = function() {
-  var fakeFirsts = ['Nimit', 'Dave', 'Shanna', 'Charlotte', 'Scott', 'Ayana', 'Omri', 'Gabriel', 'Joe'];
-  var fakeLasts = ['Hashington', 'Stackson', 'McQueue', 'OLogn', 'Ternary', 'Claujure', 'Dunderproto', 'Binder', 'Docsreader', 'Ecma'];
-  return randArrayEl(fakeFirsts) + ' ' + randArrayEl(fakeLasts);
-};
+// var randArrayEl = function(arr) {
+//   return arr[Math.floor(Math.random() * arr.length)];
+// };
 
-var getFakeTweet = function() {
-  var awesomeAdj = ['awesome', 'breathtaking', 'amazing', 'funny', 'sweet', 'cool', 'wonderful', 'mindblowing'];
-  return 'Fullstack Academy is ' + randArrayEl(awesomeAdj) + '! The instructors are just so ' + randArrayEl(awesomeAdj) + '. #fullstacklove #codedreams';
-};
+// var getFakeName = function() {
+//   var fakeFirsts = ['Nimit', 'Dave', 'Shanna', 'Charlotte', 'Scott', 'Ayana', 'Omri', 'Gabriel', 'Joe'];
+//   var fakeLasts = ['Hashington', 'Stackson', 'McQueue', 'OLogn', 'Ternary', 'Claujure', 'Dunderproto', 'Binder', 'Docsreader', 'Ecma'];
+//   return randArrayEl(fakeFirsts) + ' ' + randArrayEl(fakeLasts);
+// };
 
-for (var i = 0; i < 10; i++) {
-  module.exports.add( getFakeName(), getFakeTweet() );
-}
+// var getFakeTweet = function() {
+//   var awesomeAdj = ['awesome', 'breathtaking', 'amazing', 'funny', 'sweet', 'cool', 'wonderful', 'mindblowing'];
+//   return 'Fullstack Academy is ' + randArrayEl(awesomeAdj) + '! The instructors are just so ' + randArrayEl(awesomeAdj) + '. #fullstacklove #codedreams';
+// };
+
+// for (var i = 0; i < 10; i++) {
+//   module.exports.add( getFakeName(), getFakeTweet() );
+// }
